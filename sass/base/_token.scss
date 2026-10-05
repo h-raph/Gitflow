@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+
+:root {
+    // Colors
+    --color-main-text: #{$color-main-text};
+    --color-text-primary: #{$color-text-primary};
+    --color-text-secondary: #{$color-text-secondary};
+    --color-bg: #{$color-bg};
+    --color-alt-bg: #{$color-alt-bg};
+    --color-border: #{$color-border};
+    --color-border-form: #{$color-border-form};
+    --color-main: #{$color-main};
+    --color-main-hover: #{$color-main-hover};
+    --color-error: #{$color-error};
+    --color-lac: #{$color-lac};
+    --color-foret: #{$color-foret};
+    --color-kiosque: #{$color-kiosque};
+
+    // Spacing
+    --space-8px: #{$space-8px};
+    --space-16px: #{$space-16px};
+    --space-24px: #{$space-24px};
+    --space-40px: #{$space-40px};
+    --space-64px: #{$space-64px};
+
+    // Typography
+    --size-title-main: #{$size-title-main};
+    --weight-title-main: #{$weight-title-main};
+    --lh-title-main: #{$lh-title-main};
+
+    --size-title-section: #{$size-title-section};
+    --weight-title-section: #{$weight-title-section};
+    --lh-title-section: #{$lh-title-section};
+    
+    --size-sub-title: #{$size-sub-title};
+    --weight-sub-title: #{$weight-sub-title};
+    --lh-sub-title: #{$lh-sub-title};
+
+    --size-text-intro: #{$size-text-intro};
+    --weight-text-intro: #{$weight-text-intro};
+    --lh-text-intro: #{$lh-text-intro};
+
+    --size-text: #{$size-text};
+    --weight-text: #{$weight-text};
+    --lh-text: #{$lh-text};
+
+    --size-little-text: #{$size-little-text};
+    --weight-little-text: #{$weight-little-text};
+    --lh-little-text: #{$lh-little-text};
+}

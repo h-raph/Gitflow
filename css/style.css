@@ -6,4 +6,238 @@
   padding: 0;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: rgb(33, 33, 33);
+  background-color: rgb(218, 238, 254);
+}
+
+:root {
+  --color-main-text: #1c1b2e;
+  --color-text-primary: #3a3950;
+  --color-text-secondary: #6b6a80;
+  --color-bg: #ffffff;
+  --color-alt-bg: #f4f5f7;
+  --color-border: #e3e5ea;
+  --color-border-form: #cbd0d8;
+  --color-main: #c8402a;
+  --color-main-hover: #a3311f;
+  --color-error: #b3261e;
+  --color-lac: #1f4e8c;
+  --color-foret: #2f6b3a;
+  --color-kiosque: #b87a1e;
+  --space-8px: 8px;
+  --space-16px: 16px;
+  --space-24px: 24px;
+  --space-40px: 40px;
+  --space-64px: 64px;
+  --size-title-main: 56px;
+  --weight-title-main: 800;
+  --lh-title-main: 64px;
+  --size-title-section: 40px;
+  --weight-title-section: 700;
+  --lh-title-section: 48px;
+  --size-sub-title: 28px;
+  --weight-sub-title: 700;
+  --lh-sub-title: 36px;
+  --size-text-intro: 20px;
+  --weight-text-intro: 400;
+  --lh-text-intro: 32px;
+  --size-text: 16px;
+  --weight-text: 400;
+  --lh-text: 26px;
+  --size-little-text: 14px;
+  --weight-little-text: 400;
+  --lh-little-text: 22px;
+}
+
+.ly-docs__breadcrumb {
+  color: #6b6a80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.ly-docs__title {
+  color: #1c1b2e;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 64px;
+}
+
+.ly-docs__lead {
+  color: #3a3950;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.ly-docs__section-title {
+  color: #3a3950;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.ly-docs__section-text {
+  color: #6b6a80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.ly-docs__row {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.ly-docs__label {
+  color: #1c1b2e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.ly-docs__examples {
+  display: flex;
+  justify-content: space-around;
+  min-width: 100vw;
+  align-items: flex-end;
+}
+
+.ly-docs__swatch {
+  height: 60px;
+  width: 60px;
+  border-radius: 999px;
+  color: #6b6a80;
+  font-size: 14px;
+  font-weight: 400;
+}
+.ly-docs__swatch--text {
+  background-color: #1c1b2e;
+}
+.ly-docs__swatch--text-body {
+  background-color: #3a3950;
+}
+.ly-docs__swatch--text-muted {
+  background-color: #6b6a80;
+}
+.ly-docs__swatch--background {
+  background-color: #ffffff;
+}
+.ly-docs__swatch--background-alt {
+  background-color: #f4f5f7;
+}
+.ly-docs__swatch--border {
+  background-color: #e3e5ea;
+}
+.ly-docs__swatch--border-field {
+  background-color: #cbd0d8;
+}
+.ly-docs__swatch--primary {
+  background-color: #c8402a;
+}
+.ly-docs__swatch--primary-hover {
+  background-color: #a3311f;
+}
+.ly-docs__swatch--accent {
+  background-color: #f4c95d;
+}
+.ly-docs__swatch--error {
+  background-color: #b3261e;
+}
+
+.ly-docs__scene {
+  height: 70px;
+  width: 200px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ly-docs__scene--lake {
+  background-color: #1f4e8c;
+  color: #f4f5f7;
+}
+.ly-docs__scene--forest {
+  background-color: #2f6b3a;
+  color: #f4f5f7;
+}
+.ly-docs__scene--kiosk {
+  background-color: #b87a1e;
+  color: #1c1b2e;
+}
+
+.ly-docs__type {
+  color: #1c1b2e;
+}
+.ly-docs__type--display {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 64px;
+}
+.ly-docs__type--heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+.ly-docs__type--subheading {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.ly-docs__type--lead {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.ly-docs__type--body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.ly-docs__type--small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.ly-docs__space {
+  color: #6b6a80;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #c8402a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.ly-docs__space--xs {
+  width: 8px;
+  height: 8px;
+}
+.ly-docs__space--sm {
+  width: 16px;
+  height: 16px;
+}
+.ly-docs__space--md {
+  width: 24px;
+  height: 24px;
+}
+.ly-docs__space--lg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+.ly-docs__space--xl {
+  width: 64px;
+  height: 64px;
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */

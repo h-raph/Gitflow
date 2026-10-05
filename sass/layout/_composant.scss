@@ -1,0 +1,214 @@
+@use '../abstracts/variables' as *;
+
+.ly-docs__breadcrumb {
+    color: $color-text-secondary;
+    font-size: $size-little-text;
+    font-weight: $weight-little-text;
+    line-height: $lh-little-text;
+}
+
+.ly-docs__title {
+    color: $color-main-text;
+    font-size: $size-title-main;
+    font-weight: $weight-title-main;
+    line-height: $lh-title-main;
+}
+
+.ly-docs__lead {
+    color: $color-text-primary;
+    font-size: $size-sub-title;
+    font-weight: $weight-sub-title;
+    line-height: $lh-sub-title;
+}
+
+.ly-docs__section-title {
+    color: $color-text-primary;
+    font-size: $size-title-section;
+    font-weight: $weight-title-section;
+    line-height: $lh-title-section;
+}
+
+.ly-docs__section-text {
+    color: $color-text-secondary;
+    font-size: $size-little-text;
+    font-weight: $weight-little-text;
+    line-height: $lh-little-text;
+}
+
+.ly-docs__row {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ly-docs__label {
+    color: $color-main-text;
+    font-size: $size-text;
+    font-weight: $weight-text;
+    line-height: $lh-text;
+}
+
+.ly-docs__examples {
+    display: flex;
+    justify-content: space-around;
+    min-width: 100vw;
+    align-items: flex-end;
+}
+
+.ly-docs__swatch {
+    height: 60px;
+    width: 60px;
+    border-radius: $radius-999px;
+    color: $color-text-secondary;
+    font-size: $size-little-text;
+    font-weight: $weight-little-text;
+
+    &--text {
+        background-color: $color-main-text;
+    }
+
+    &--text-body {
+        background-color: $color-text-primary;
+    }
+
+    &--text-muted {
+        background-color: $color-text-secondary;
+    }
+
+    &--background {
+        background-color: $color-bg;
+    }
+
+    &--background-alt {
+        background-color: $color-alt-bg;
+    }
+
+    &--border {
+        background-color: $color-border;
+    }
+
+    &--border-field {
+        background-color: $color-border-form;
+    }
+
+    &--primary {
+        background-color: $color-main;
+    }
+
+    &--primary-hover {
+        background-color: $color-main-hover;
+    }
+
+    &--accent {
+        background-color: $color-accent;
+    }
+
+    &--error {
+        background-color: $color-error;
+    }
+}
+
+.ly-docs__scene {
+    height: 70px;
+    width: 200px;
+    border-radius: $radius-12px;
+    font-size: $size-text;
+    font-weight: $weight-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--lake {
+        background-color: $color-lac;
+        color: $color-alt-bg;
+    }
+
+    &--forest {
+        background-color: $color-foret;
+        color: $color-alt-bg;
+    }
+
+    &--kiosk {
+        background-color: $color-kiosque;
+        color: $color-main-text;
+    }
+}
+
+.ly-docs__type {
+    color: $color-main-text;
+
+    &--display {
+        font-size: $size-title-main;
+        font-weight: $weight-title-main;
+        line-height: $lh-title-main;
+    }
+
+    &--heading {
+        font-size: $size-title-section;
+        font-weight: $weight-title-section;
+        line-height: $lh-title-section;
+    }
+
+    &--subheading {
+        font-size: $size-sub-title;
+        font-weight: $weight-sub-title;
+        line-height: $lh-sub-title;
+    }
+
+    &--lead {
+        font-size: $size-text-intro;
+        font-weight: $weight-text-intro;
+        line-height: $lh-text-intro;
+    }
+
+    &--body {
+        font-size: $size-text;
+        font-weight: $weight-text;
+        line-height: $lh-text;
+    }
+
+    &--small {
+        font-size: $size-little-text;
+        font-weight: $weight-little-text;
+        line-height: $lh-little-text;
+    }
+}
+
+.ly-docs__space {
+    color: $color-text-secondary;
+    font-size: $size-little-text;
+    font-weight: $weight-little-text;
+    background-color: $color-main;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    &--xs {
+        width: $space-8px;
+        height: $space-8px;
+    }
+
+    &--sm {
+        width: $space-16px;
+        height: $space-16px;
+    }
+
+    &--md {
+        width: $space-24px;
+        height: $space-24px;
+    }
+
+    &--lg {
+        width: $space-40px;
+        height: $space-40px;
+        color: white;
+    }
+
+    &--xl {
+        width: $space-64px;
+        height: $space-64px;
+        color: white;
+    }
+}

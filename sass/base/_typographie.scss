@@ -1,35 +1,23 @@
-h1 {
-    font-size: 56px;
-    font-weight: 800;
-    line-height: 64px;
-}
+$size-title-main: 56px;
+$weight-title-main: 800;
+$lh-title-main: 64px;
 
-h2 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-}
+$size-title-section: 40px;
+$weight-title-section: 700;
+$lh-title-section: 48px;
 
-h3 {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36px;
-}
+$size-sub-title: 28px;
+$weight-sub-title: 700;
+$lh-sub-title: 36px;
 
-span {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
-}
+$size-text-intro: 20px;
+$weight-text-intro: 400;
+$lh-text-intro: 32px;
 
-p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-}
+$size-text: 16px;
+$weight-text: 400;
+$lh-text: 26px;
 
-p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-}
+$size-little-text: 14px;
+$weight-little-text: 400;
+$lh-little-text: 22px;
