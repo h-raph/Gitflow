@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de composants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main class="ly-docs">
+
+        <header class="ly-docs__intro">
+            <div class="ly-container">
+                <p class="ly-docs__breadcrumb">Accueil / Bibliothèque de composants</p>
+                <h1 class="ly-docs__title">Bibliothèque de composants</h1>
+                <p class="ly-docs__lead">Tous les composants du site, avec leurs variantes et leurs états.</p>
+            </div>
+        </header>
+
+        <div class="ly-container">
+
+            <nav class="ly-docs__toc" aria-label="Sommaire">
+                <a class="ly-docs__toc-link" href="#jetons">Jetons</a>
+            </nav>
+
+            <section class="ly-docs__section" id="jetons" aria-labelledby="jetons-titre">
+                <h2 class="ly-docs__section-title" id="jetons-titre">Jetons</h2>
+                <p class="ly-docs__section-text">Couleurs, typographie et espacements utilisés par tous les composants.
+                </p>
+
+                <div class="ly-docs__row">
+                    <p class="ly-docs__label">Couleurs</p>
+                    <div class="ly-docs__examples">
+                        <div class="ly-docs__swatch ly-docs__swatch--text">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Texte principal <span class="ly-docs__swatch-value">#1C1B2E</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--text-body">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Texte courant <span class="ly-docs__swatch-value">#3A3950</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--text-muted">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Texte secondaire <span class="ly-docs__swatch-value">#6B6A80</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--background">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Fond de page <span class="ly-docs__swatch-value">#FFFFFF</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--background-alt">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Fond alterné <span class="ly-docs__swatch-value">#F4F5F7</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--border">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Bordures <span class="ly-docs__swatch-value">#E3E5EA</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--border-field">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Bordure de champ <span class="ly-docs__swatch-value">#CBD0D8</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--primary">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Principale <span class="ly-docs__swatch-value">#C8402A</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--primary-hover">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Survol <span class="ly-docs__swatch-value">#A3311F</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--accent">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Accent <span class="ly-docs__swatch-value">#F4C95D</span></p>
+                        </div>
+                        <div class="ly-docs__swatch ly-docs__swatch--error">
+                            <span class="ly-docs__swatch-color"></span>
+                            <p>Erreur <span class="ly-docs__swatch-value">#B3261E</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ly-docs__row">
+                    <p class="ly-docs__label">Scènes</p>
+                    <div class="ly-docs__examples">
+                        <div class="ly-docs__scene ly-docs__scene--lake">
+                            <p class="ly-docs__scene-color">Scène du Lac</p>
+                            <p>#1F4E8C</p>
+                        </div>
+                        <div class="ly-docs__scene ly-docs__scene--forest">
+                            <p class="ly-docs__scene-color">Scène de la Forêt</p>
+                            <p>#2F6B3A</p>
+                        </div>
+                        <div class="ly-docs__scene ly-docs__scene--kiosk">
+                            <p class="ly-docs__scene-color">Le Kiosque</p>
+                            <p>#B87A1E</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ly-docs__row">
+                    <p class="ly-docs__label">Typographie</p>
+                    <div class="ly-docs__examples">
+                        <p class="ly-docs__type ly-docs__type--display">Titre 56</p>
+                        <p class="ly-docs__type ly-docs__type--heading">Titre 40</p>
+                        <p class="ly-docs__type ly-docs__type--subheading">Sous-titre 28</p>
+                        <p class="ly-docs__type ly-docs__type--lead">Introduction 20</p>
+                        <p class="ly-docs__type ly-docs__type--body">Courant 16</p>
+                        <p class="ly-docs__type ly-docs__type--small">Petit 14</p>
+                    </div>
+                </div>
+
+                <div class="ly-docs__row">
+                    <p class="ly-docs__label">Espacements</p>
+                    <div class="ly-docs__examples">
+                        <div class="ly-docs__space ly-docs__space--xs">
+                            <span class="ly-docs__space-box"></span>
+                            <p>8 px</p>
+                        </div>
+                        <div class="ly-docs__space ly-docs__space--sm">
+                            <span class="ly-docs__space-box"></span>
+                            <p>16 px</p>
+                        </div>
+                        <div class="ly-docs__space ly-docs__space--md">
+                            <span class="ly-docs__space-box"></span>
+                            <p>24 px</p>
+                        </div>
+                        <div class="ly-docs__space ly-docs__space--lg">
+                            <span class="ly-docs__space-box"></span>
+                            <p>40 px</p>
+                        </div>
+                        <div class="ly-docs__space ly-docs__space--xl">
+                            <span class="ly-docs__space-box"></span>
+                            <p>64 px</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+</body>
+
+</html>
