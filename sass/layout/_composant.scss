@@ -54,6 +54,10 @@
     }
 }
 
+.ly-docs__grid {
+    display: grid;
+}
+
 .ly-docs__row {
     margin: $space-40px auto;
     display: flex;
@@ -63,17 +67,18 @@
 .ly-docs__label {
     color: $color-main-text;
     font-size: $size-text;
-    font-weight: $weight-text;
+    font-weight: $weight-sub-title;
     line-height: $lh-text;
     margin-right: $space-40px;
     align-content: center;
 }
 
 .ly-docs__examples {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-auto-flow: column;
     width: 100vw;
-    align-items: flex-end;
+    align-items: baseline;
+    justify-items: start;
 }
 
 .ly-docs__swatch {
@@ -137,7 +142,7 @@
     width: 200px;
     border-radius: $radius-12px;
     font-size: $size-text;
-    font-weight: $weight-text;
+    font-weight: $weight-sub-title;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,12 +236,147 @@
     &--lg::before {
         width: $space-40px;
         height: $space-40px;
-        color: white;
     }
 
     &--xl::before {
         width: $space-64px;
         height: $space-64px;
-        color: white;
+    }
+}
+
+.ly-docs__button {
+    padding: 0.75em 1.3em;
+    font-size: $size-text;
+    font-weight: $weight-text;
+    line-height: $lh-text;
+    border-radius: $radius-12px;
+
+    &--main {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--primary {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--secondary {
+        background-color: $color-main-text;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--border {
+        background-color: $color-bg;
+        color: $color-main-text;
+        border: 2px solid $color-main-text;
+    }
+
+    &--clear {
+        background-color: $color-bg;
+        color: $color-main-text;
+        border: none;
+
+        &-bg {
+            background-color: $color-main-text;
+            padding: 20px 30px;
+            border-radius: $radius-12px;
+        }
+    }
+
+    &--small {
+        font-size: $size-little-text;
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--medium {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--large {
+        font-size: $size-sub-title;
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--plus {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+
+        &-text::before {
+            content: "+";
+            margin-right: $space-8px;
+        }
+    }
+
+    &--reserved {
+        background-color: $color-main-text;
+        color: $color-alt-bg;
+        border: none;
+
+        &-text::before {
+            content: "🎟️";
+            margin-right: $space-8px;
+        }
+    }
+
+    &--like {
+        background-color: $color-bg;
+        color: $color-main-text;
+        border: 2px solid $color-main-text;
+    }
+
+    &--more {
+        background-color: $color-bg;
+        color: $color-main-text;
+        border: 2px solid $color-main-text;
+
+        &-text::before {
+            content: "←";
+            margin-right: $space-8px;
+        }
+    }
+
+    &--combo {
+        font-size: $size-sub-title;
+        background-color: $color-main-text;
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--hover {
+        background-color: darken($color-main, 10%);
+        color: $color-alt-bg;
+        border: none;
+    }
+
+    &--focus {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+        outline: 0.2em solid lighten($color-main, 25%);
+        outline-offset: 0.2em;
+    }
+
+    &--off {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
+        opacity: 50%;
+    }
+
+    &--load {
+        background-color: $color-main;
+        color: $color-alt-bg;
+        border: none;
     }
 }
