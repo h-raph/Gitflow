@@ -12,6 +12,7 @@
     font-size: $size-title-main;
     font-weight: $weight-title-main;
     line-height: $lh-title-main;
+    margin: $space-16px auto;
 }
 
 .ly-docs__lead {
@@ -19,6 +20,12 @@
     font-size: $size-sub-title;
     font-weight: $weight-sub-title;
     line-height: $lh-sub-title;
+    margin: $space-16px auto;
+}
+
+.ly-docs__toc-link {
+    text-decoration: none;
+    color: $color-main;
 }
 
 .ly-docs__section-title {
@@ -26,17 +33,29 @@
     font-size: $size-title-section;
     font-weight: $weight-title-section;
     line-height: $lh-title-section;
+    margin: $space-16px auto;
 }
 
 .ly-docs__section-text {
     color: $color-text-secondary;
-    font-size: $size-little-text;
-    font-weight: $weight-little-text;
-    line-height: $lh-little-text;
+    font-size: $size-text;
+    font-weight: $weight-text;
+    line-height: $lh-text;
+    margin: $space-16px auto;
+    display: flex;
+    flex-direction: column;
+    gap: $space-16px;
+
+    &::before {
+        content: "";
+        width: 100vw;
+        height: 2px;
+        background-color: $color-main;
+    }
 }
 
 .ly-docs__row {
-    margin-bottom: 30px;
+    margin: $space-40px auto;
     display: flex;
     flex-direction: row;
 }
@@ -46,64 +65,69 @@
     font-size: $size-text;
     font-weight: $weight-text;
     line-height: $lh-text;
+    margin-right: $space-40px;
+    align-content: center;
 }
 
 .ly-docs__examples {
     display: flex;
     justify-content: space-around;
-    min-width: 100vw;
+    width: 100vw;
     align-items: flex-end;
 }
 
 .ly-docs__swatch {
-    height: 60px;
-    width: 60px;
-    border-radius: $radius-999px;
     color: $color-text-secondary;
     font-size: $size-little-text;
     font-weight: $weight-little-text;
+    display: flex;
+    flex-direction: column;
+    gap: $space-8px;
 
-    &--text {
+    &::before {
+        content: " ";
+        height: 60px;
+        width: 60px;
+        border-radius: $radius-999px;
+    }
+
+    &--text::before {
         background-color: $color-main-text;
     }
 
-    &--text-body {
+    &--text-body::before {
         background-color: $color-text-primary;
     }
 
-    &--text-muted {
+    &--text-muted::before {
         background-color: $color-text-secondary;
     }
 
-    &--background {
-        background-color: $color-bg;
-    }
-
-    &--background-alt {
+    &--background-alt::before {
         background-color: $color-alt-bg;
     }
 
-    &--border {
+    &--border::before {
         background-color: $color-border;
     }
 
-    &--border-field {
+    &--border-field::before {
         background-color: $color-border-form;
     }
 
-    &--primary {
+    &--primary::before {
         background-color: $color-main;
     }
 
-    &--primary-hover {
+    &--primary-hover::before {
         background-color: $color-main-hover;
     }
 
-    &--accent {
+    &--accent::before {
         background-color: $color-accent;
     }
 
-    &--error {
+    &--error::before {
         background-color: $color-error;
     }
 }
@@ -179,34 +203,38 @@
     color: $color-text-secondary;
     font-size: $size-little-text;
     font-weight: $weight-little-text;
-    background-color: $color-main;
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    gap: 6px;
 
-    &--xs {
+    &::before {
+        content: "";
+        background-color: $color-main;
+    }
+
+    &--xs::before {
         width: $space-8px;
         height: $space-8px;
     }
 
-    &--sm {
+    &--sm::before {
         width: $space-16px;
         height: $space-16px;
     }
 
-    &--md {
+    &--md::before {
         width: $space-24px;
         height: $space-24px;
     }
 
-    &--lg {
+    &--lg::before {
         width: $space-40px;
         height: $space-40px;
         color: white;
     }
 
-    &--xl {
+    &--xl::before {
         width: $space-64px;
         height: $space-64px;
         color: white;
