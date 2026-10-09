@@ -54,14 +54,15 @@
     }
 }
 
-.ly-docs__grid {
-    display: grid;
-}
-
 .ly-docs__row {
     margin: $space-40px auto;
-    display: flex;
-    flex-direction: row;
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: end;
+    grid-template-columns: 1fr repeat(2fr, 10);
+    gap: 20px;
 }
 
 .ly-docs__label {
@@ -69,17 +70,11 @@
     font-size: $size-text;
     font-weight: $weight-sub-title;
     line-height: $lh-text;
-    margin-right: $space-40px;
+    width: 10em;
     align-content: center;
 }
 
-.ly-docs__examples {
-    display: grid;
-    grid-auto-flow: column;
-    width: 100vw;
-    align-items: baseline;
-    justify-items: start;
-}
+// ################ JETONS ################
 
 .ly-docs__swatch {
     color: $color-text-secondary;
@@ -88,7 +83,9 @@
     display: flex;
     flex-direction: column;
     gap: $space-8px;
+    width: 125px;
 
+    // ########### COULEURS ###########
     &::before {
         content: " ";
         height: 60px;
@@ -137,6 +134,7 @@
     }
 }
 
+// ########### SCENES ###########
 .ly-docs__scene {
     height: 70px;
     width: 200px;
@@ -164,6 +162,7 @@
     }
 }
 
+// ########### TYPOGRAPHIE ###########
 .ly-docs__type {
     color: $color-main-text;
 
@@ -204,6 +203,8 @@
     }
 }
 
+
+// ########### ESPACEMENTS ###########
 .ly-docs__space {
     color: $color-text-secondary;
     font-size: $size-little-text;
@@ -244,6 +245,8 @@
     }
 }
 
+// ################ BOUTONS ################
+
 .ly-docs__button {
     padding: 0.75em 1.3em;
     font-size: $size-text;
@@ -251,12 +254,14 @@
     line-height: $lh-text;
     border-radius: $radius-12px;
 
+    // ########### BOUTON DE BASE ###########
     &--main {
         background-color: $color-main;
         color: $color-alt-bg;
         border: none;
     }
 
+    // ########### COULEURS ###########
     &--primary {
         background-color: $color-main;
         color: $color-alt-bg;
@@ -287,6 +292,7 @@
         }
     }
 
+    // ########### TAILLES ###########
     &--small {
         font-size: $size-little-text;
         background-color: $color-main;
@@ -307,6 +313,7 @@
         border: none;
     }
 
+    // ########### AVEC ICONE ###########
     &--plus {
         background-color: $color-main;
         color: $color-alt-bg;
@@ -346,6 +353,7 @@
         }
     }
 
+    // ########### COMBINAISONS ET ÉTATS ###########
     &--combo {
         font-size: $size-sub-title;
         background-color: $color-main-text;
@@ -378,5 +386,72 @@
         background-color: $color-main;
         color: $color-alt-bg;
         border: none;
+    }
+}
+
+// ################ BADGES ################
+.ly-docs__badge {
+    padding: 0.2em 0.7em;
+    border-radius: $radius-12px;
+
+    &--main {
+        background-color: $color-alt-bg;
+    }
+
+    &--lake {
+        background-color: $color-lac;
+        color: $color-bg;
+    }
+
+    &--forest {
+        background-color: $color-foret;
+        color: $color-bg;
+    }
+
+    &--kiosque {
+        background-color: $color-kiosque;
+    }
+
+    &--new {
+        background-color: rgb(188, 237, 188);
+        color: rgb(0, 97, 0);
+    }
+
+    &--last {
+        background-color: lightyellow;
+        color: rgb(165, 110, 42);
+    }
+
+    &--complet {
+        background-color: rgb(250, 184, 184);
+        color: rgb(248, 32, 32);
+    }
+
+    &--small {
+        font-size: $size-little-text;
+        background-color: $color-lac;
+        color: $color-bg;
+    }
+
+    &--large {
+        font-size: $size-text-intro;
+        background-color: $color-lac;
+        color: $color-bg;
+    }
+    
+    &--radius {
+        background-color: $color-foret;
+        color: $color-bg;
+    }
+
+    &--border {
+        background-color: $color-bg;
+        border: 2px solid $color-foret;
+        color: $color-foret;
+    }
+
+    &--angle {
+        background-color: $color-kiosque;
+        border-radius: 0px;
     }
 }
