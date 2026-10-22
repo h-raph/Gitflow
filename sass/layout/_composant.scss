@@ -1,13 +1,14 @@
 @use '../abstracts/variables' as *;
 
-.ly-docs__breadcrumb {
+// ================ HEADER ================
+.header__breadcrumb {
     color: $color-text-secondary;
     font-size: $size-little-text;
     font-weight: $weight-little-text;
     line-height: $lh-little-text;
 }
 
-.ly-docs__title {
+.header__title {
     color: $color-main-text;
     font-size: $size-title-main;
     font-weight: $weight-title-main;
@@ -15,7 +16,7 @@
     margin: $space-16px auto;
 }
 
-.ly-docs__lead {
+.header__lead {
     color: $color-text-primary;
     font-size: $size-sub-title;
     font-weight: $weight-sub-title;
@@ -23,435 +24,486 @@
     margin: $space-16px auto;
 }
 
-.ly-docs__toc-link {
-    text-decoration: none;
-    color: $color-main;
-}
-
-.ly-docs__section-title {
-    color: $color-text-primary;
-    font-size: $size-title-section;
-    font-weight: $weight-title-section;
-    line-height: $lh-title-section;
-    margin: $space-16px auto;
-}
-
-.ly-docs__section-text {
-    color: $color-text-secondary;
-    font-size: $size-text;
-    font-weight: $weight-text;
-    line-height: $lh-text;
-    margin: $space-16px auto;
-    display: flex;
-    flex-direction: column;
-    gap: $space-16px;
-
-    &::before {
-        content: "";
-        width: 100vw;
-        height: 2px;
-        background-color: $color-main;
+.nav {
+    &__link {
+        text-decoration: none;
+        color: $color-main;
     }
 }
 
-.ly-docs__row {
-    margin: $space-40px auto;
-    width: 100vw;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-    align-items: end;
-    grid-template-columns: 1fr repeat(2fr, 10);
-    gap: 20px;
-}
-
-.ly-docs__label {
-    color: $color-main-text;
-    font-size: $size-text;
-    font-weight: $weight-sub-title;
-    line-height: $lh-text;
-    width: 10em;
-    align-content: center;
-}
-
-// ################ JETONS ################
-
-.ly-docs__swatch {
-    color: $color-text-secondary;
-    font-size: $size-little-text;
-    font-weight: $weight-little-text;
-    display: flex;
-    flex-direction: column;
-    gap: $space-8px;
-    width: 125px;
-
-    // ########### COULEURS ###########
-    &::before {
-        content: " ";
-        height: 60px;
-        width: 60px;
-        border-radius: $radius-999px;
-    }
-
-    &--text::before {
-        background-color: $color-main-text;
-    }
-
-    &--text-body::before {
-        background-color: $color-text-primary;
-    }
-
-    &--text-muted::before {
-        background-color: $color-text-secondary;
-    }
-
-    &--background-alt::before {
-        background-color: $color-alt-bg;
-    }
-
-    &--border::before {
-        background-color: $color-border;
-    }
-
-    &--border-field::before {
-        background-color: $color-border-form;
-    }
-
-    &--primary::before {
-        background-color: $color-main;
-    }
-
-    &--primary-hover::before {
-        background-color: $color-main-hover;
-    }
-
-    &--accent::before {
-        background-color: $color-accent;
-    }
-
-    &--error::before {
-        background-color: $color-error;
-    }
-}
-
-// ########### SCENES ###########
-.ly-docs__scene {
-    height: 70px;
-    width: 200px;
-    border-radius: $radius-12px;
-    font-size: $size-text;
-    font-weight: $weight-sub-title;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &--lake {
-        background-color: $color-lac;
-        color: $color-alt-bg;
-    }
-
-    &--forest {
-        background-color: $color-foret;
-        color: $color-alt-bg;
-    }
-
-    &--kiosk {
-        background-color: $color-kiosque;
-        color: $color-main-text;
-    }
-}
-
-// ########### TYPOGRAPHIE ###########
-.ly-docs__type {
-    color: $color-main-text;
-
-    &--display {
-        font-size: $size-title-main;
-        font-weight: $weight-title-main;
-        line-height: $lh-title-main;
-    }
-
-    &--heading {
+.section {
+    &__title {
+        color: $color-text-primary;
         font-size: $size-title-section;
         font-weight: $weight-title-section;
         line-height: $lh-title-section;
+        margin: $space-16px auto;
     }
 
-    &--subheading {
-        font-size: $size-sub-title;
-        font-weight: $weight-sub-title;
-        line-height: $lh-sub-title;
-    }
-
-    &--lead {
-        font-size: $size-text-intro;
-        font-weight: $weight-text-intro;
-        line-height: $lh-text-intro;
-    }
-
-    &--body {
+    &__text {
+        color: $color-text-secondary;
         font-size: $size-text;
         font-weight: $weight-text;
         line-height: $lh-text;
-    }
+        margin: $space-16px auto;
+        display: flex;
+        flex-direction: column;
+        gap: $space-16px;
 
-    &--small {
+        &::before {
+            content: "";
+            width: 100vw;
+            height: 2px;
+            background-color: $color-main;
+        }
+    }
+}
+
+.label {
+    color: $color-main-text;
+    font-size: $size-text;
+    font-weight: $weight-sub-title;
+    line-height: $lh-text;
+    align-self: center;
+}
+
+// ####################### JETONS #######################
+// ================ COULEUR ================ 
+.color {
+    &__circle {
+        color: $color-text-secondary;
         font-size: $size-little-text;
         font-weight: $weight-little-text;
-        line-height: $lh-little-text;
+        display: flex;
+        flex-direction: column;
+        gap: $space-8px;
+        width: 125px;
+
+        &::before {
+            content: " ";
+            height: 60px;
+            width: 60px;
+            border-radius: $radius-999px;
+        }
+
+        &--text::before {
+            background-color: $color-main-text;
+        }
+
+        &--text-body::before {
+            background-color: $color-text-primary;
+        }
+
+        &--text-muted::before {
+            background-color: $color-text-secondary;
+        }
+
+        &--background-alt::before {
+            background-color: $color-alt-bg;
+        }
+
+        &--border::before {
+            background-color: $color-border;
+        }
+
+        &--border-field::before {
+            background-color: $color-border-form;
+        }
+
+        &--primary::before {
+            background-color: $color-main;
+        }
+
+        &--primary-hover::before {
+            background-color: $color-main-hover;
+        }
+
+        &--accent::before {
+            background-color: $color-accent;
+        }
+
+        &--error::before {
+            background-color: $color-error;
+        }
     }
 }
 
+// ================  SCENES ================ 
+.scene {
+    &__card {
+        height: 70px;
+        width: 200px;
+        border-radius: $radius-12px;
+        font-size: $size-text;
+        font-weight: $weight-sub-title;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-// ########### ESPACEMENTS ###########
-.ly-docs__space {
-    color: $color-text-secondary;
-    font-size: $size-little-text;
-    font-weight: $weight-little-text;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 6px;
+        &--lake {
+            background-color: $color-lac;
+            color: $color-alt-bg;
+        }
 
-    &::before {
-        content: "";
-        background-color: $color-main;
-    }
+        &--forest {
+            background-color: $color-foret;
+            color: $color-alt-bg;
+        }
 
-    &--xs::before {
-        width: $space-8px;
-        height: $space-8px;
-    }
-
-    &--sm::before {
-        width: $space-16px;
-        height: $space-16px;
-    }
-
-    &--md::before {
-        width: $space-24px;
-        height: $space-24px;
-    }
-
-    &--lg::before {
-        width: $space-40px;
-        height: $space-40px;
-    }
-
-    &--xl::before {
-        width: $space-64px;
-        height: $space-64px;
+        &--kiosk {
+            background-color: $color-kiosque;
+            color: $color-main-text;
+        }
     }
 }
 
-// ################ BOUTONS ################
+// ================  TYPOGRAPHIE ================ 
+.typo {
+    align-items: end;
 
-.ly-docs__button {
+    &__type {
+        color: $color-main-text;
+
+        &--display {
+            font-size: $size-title-main;
+            font-weight: $weight-title-main;
+            line-height: $lh-title-main;
+        }
+
+        &--heading {
+            font-size: $size-title-section;
+            font-weight: $weight-title-section;
+            line-height: $lh-title-section;
+        }
+
+        &--subheading {
+            font-size: $size-sub-title;
+            font-weight: $weight-sub-title;
+            line-height: $lh-sub-title;
+        }
+
+        &--lead {
+            font-size: $size-text-intro;
+            font-weight: $weight-text-intro;
+            line-height: $lh-text-intro;
+        }
+
+        &--body {
+            font-size: $size-text;
+            font-weight: $weight-text;
+            line-height: $lh-text;
+        }
+
+        &--small {
+            font-size: $size-little-text;
+            font-weight: $weight-little-text;
+            line-height: $lh-little-text;
+        }
+    }
+}
+
+// ================  SPACE ================ 
+.space {
+    align-items: end;
+
+    &__size {
+        color: $color-text-secondary;
+        font-size: $size-little-text;
+        font-weight: $weight-little-text;
+        display: flex;
+        align-items: flex-end;
+        gap: $space-8px;
+
+        &::before {
+            content: " ";
+            background-color: $color-main;
+        }
+
+        &--xs::before {
+            width: $space-8px;
+            height: $space-8px;
+        }
+
+        &--sm::before {
+            width: $space-16px;
+            height: $space-16px;
+        }
+
+        &--md::before {
+            width: $space-24px;
+            height: $space-24px;
+        }
+
+        &--lg::before {
+            width: $space-40px;
+            height: $space-40px;
+        }
+
+        &--xl::before {
+            width: $space-64px;
+            height: $space-64px;
+        }
+    }
+}
+
+// ####################### BOUTONS #######################
+.button {
     padding: 0.75em 1.3em;
     font-size: $size-text;
     font-weight: $weight-text;
     line-height: $lh-text;
     border-radius: $radius-12px;
+}
 
-    // ########### BOUTON DE BASE ###########
-    &--main {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
+// ================ BOUTON DE BASE ================
+.base-btn {
+    &__button {
+        &--main {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
     }
+}
 
-    // ########### COULEURS ###########
-    &--primary {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
-    }
 
-    &--secondary {
-        background-color: $color-main-text;
-        color: $color-alt-bg;
-        border: none;
-    }
+// ================ COULEURS ================
+.color-btn {
+    &__button {
+        &--primary {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
 
-    &--border {
-        background-color: $color-bg;
-        color: $color-main-text;
-        border: 2px solid $color-main-text;
-    }
-
-    &--clear {
-        background-color: $color-bg;
-        color: $color-main-text;
-        border: none;
-
-        &-bg {
+        &--secondary {
             background-color: $color-main-text;
-            padding: 20px 30px;
-            border-radius: $radius-12px;
+            color: $color-alt-bg;
+            border: none;
+        }
+
+        &--border {
+            background-color: $color-bg;
+            color: $color-main-text;
+            border: 2px solid $color-main-text;
+        }
+
+        &--clear {
+            background-color: $color-bg;
+            color: $color-main-text;
+            border: none;
+            width: 100%;
         }
     }
 
-    // ########### TAILLES ###########
-    &--small {
-        font-size: $size-little-text;
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
+    &__bg {
+        background-color: $color-main-text;
+        padding: 20px 30px;
+        border-radius: $radius-12px;
+    }
+}
+
+// ================ TAILLES ================
+.size-btn {
+    &__button {
+        &--small {
+            font-size: $size-little-text;
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
+
+        &--medium {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
+
+        &--large {
+            font-size: $size-sub-title;
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
+    }
+}
+
+// ================ AVEC ICONE ================
+.icon {
+    &__button {
+        &--plus {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
+
+        &--reserved {
+            background-color: $color-main-text;
+            color: $color-alt-bg;
+            border: none;
+        }
+
+        &--like {
+            background-color: $color-bg;
+            color: $color-main-text;
+            border: 2px solid $color-main-text;
+        }
+
+        &--more {
+            background-color: $color-bg;
+            color: $color-main-text;
+            border: 2px solid $color-main-text;
+        }
     }
 
-    &--medium {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
-    }
-
-    &--large {
-        font-size: $size-sub-title;
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
-    }
-
-    // ########### AVEC ICONE ###########
-    &--plus {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
-
-        &-text::before {
+    &__text {
+        &--plus::before {
             content: "+";
             margin-right: $space-8px;
         }
-    }
 
-    &--reserved {
-        background-color: $color-main-text;
-        color: $color-alt-bg;
-        border: none;
-
-        &-text::before {
+        &--reserved::before {
             content: "🎟️";
             margin-right: $space-8px;
         }
-    }
 
-    &--like {
-        background-color: $color-bg;
-        color: $color-main-text;
-        border: 2px solid $color-main-text;
-    }
-
-    &--more {
-        background-color: $color-bg;
-        color: $color-main-text;
-        border: 2px solid $color-main-text;
-
-        &-text::before {
+        &--more::before {
             content: "←";
             margin-right: $space-8px;
         }
     }
+}
 
-    // ########### COMBINAISONS ET ÉTATS ###########
-    &--combo {
-        font-size: $size-sub-title;
-        background-color: $color-main-text;
-        color: $color-alt-bg;
-        border: none;
-    }
+// ============= COMBINAISONS ET ÉTATS =============
+.combi-state {
+    &__button {
+        &--combo {
+            font-size: $size-sub-title;
+            background-color: $color-main-text;
+            color: $color-alt-bg;
+            border: none;
+        }
 
-    &--hover {
-        background-color: darken($color-main, 10%);
-        color: $color-alt-bg;
-        border: none;
-    }
+        &--hover {
+            background-color: darken($color-main, 10%);
+            color: $color-alt-bg;
+            border: none;
+        }
 
-    &--focus {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
-        outline: 0.2em solid lighten($color-main, 25%);
-        outline-offset: 0.2em;
-    }
+        &--focus {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+            outline: 0.2em solid lighten($color-main, 25%);
+            outline-offset: 0.2em;
+        }
 
-    &--off {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
-        opacity: 50%;
-    }
+        &--off {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+            opacity: 50%;
+        }
 
-    &--load {
-        background-color: $color-main;
-        color: $color-alt-bg;
-        border: none;
+        &--load {
+            background-color: $color-main;
+            color: $color-alt-bg;
+            border: none;
+        }
     }
 }
 
-// ################ BADGES ################
-.ly-docs__badge {
+// ####################### BADGES #######################
+.badge {
     padding: 0.2em 0.7em;
     border-radius: $radius-12px;
+    align-content: center;
+    text-align: center;
+}
 
-    &--main {
-        background-color: $color-alt-bg;
+// ================ BADGE DE BASE ================
+.base-badge {
+    &__badge {
+        &--main {
+            background-color: $color-alt-bg;
+        }
     }
+}
 
-    &--lake {
-        background-color: $color-lac;
-        color: $color-bg;
-    }
+// ================ SCENE ================
+.scene-badge {
+    &__badge {
+        &--lake {
+            background-color: $color-lac;
+            color: $color-bg;
+        }
 
-    &--forest {
-        background-color: $color-foret;
-        color: $color-bg;
-    }
+        &--forest {
+            background-color: $color-foret;
+            color: $color-bg;
+        }
 
-    &--kiosque {
-        background-color: $color-kiosque;
+        &--kiosque {
+            background-color: $color-kiosque;
+        }
     }
+}
 
-    &--new {
-        background-color: rgb(188, 237, 188);
-        color: rgb(0, 97, 0);
-    }
+// ================ STATUT ================
+.statut {
+    &__badge {
+        &--new {
+            background-color: rgb(188, 237, 188);
+            color: rgb(0, 97, 0);
+        }
 
-    &--last {
-        background-color: lightyellow;
-        color: rgb(165, 110, 42);
-    }
+        &--last {
+            background-color: lightyellow;
+            color: rgb(165, 110, 42);
+        }
 
-    &--complet {
-        background-color: rgb(250, 184, 184);
-        color: rgb(248, 32, 32);
+        &--complet {
+            background-color: rgb(250, 184, 184);
+            color: rgb(248, 32, 32);
+        }
     }
+}
 
-    &--small {
-        font-size: $size-little-text;
-        background-color: $color-lac;
-        color: $color-bg;
-    }
+// ================ TAILLES ================
+.size-badge {
+    &__badge {
+        &--small {
+            font-size: $size-little-text;
+            background-color: $color-lac;
+            color: $color-bg;
+        }
 
-    &--large {
-        font-size: $size-text-intro;
-        background-color: $color-lac;
-        color: $color-bg;
+        &--large {
+            font-size: $size-text-intro;
+            background-color: $color-lac;
+            color: $color-bg;
+        }
     }
-    
-    &--radius {
-        background-color: $color-foret;
-        color: $color-bg;
-    }
+}
 
-    &--border {
-        background-color: $color-bg;
-        border: 2px solid $color-foret;
-        color: $color-foret;
-    }
+// ================ STYLE ================
+.style {
+    &__badge {
+        &--radius {
+            background-color: $color-foret;
+            color: $color-bg;
+        }
 
-    &--angle {
-        background-color: $color-kiosque;
-        border-radius: 0px;
+        &--border {
+            background-color: $color-bg;
+            border: 2px solid $color-foret;
+            color: $color-foret;
+        }
+
+        &--angle {
+            background-color: $color-kiosque;
+            border-radius: 0px;
+        }
     }
 }
