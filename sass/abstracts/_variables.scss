@@ -55,3 +55,13 @@ $lh-text: 26px;
 $size-little-text: 14px;
 $weight-little-text: 400;
 $lh-little-text: 22px;
+
+// =========== GRID ===========
+$grid-columns: 12;
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        // span X signifie "prend X colonnes dans la grille"
+        grid-column: span $i;
+    }
+}
